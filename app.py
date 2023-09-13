@@ -86,7 +86,11 @@ def zkt_log(process,data,status, sif, numero_pedido, retorno):
     cursor.close()
     cnxn.close()
 
-  
+
+@app.route("/", methods=["GET"])
+def hello_world():
+    return "<p>Hello, World!</p>"
+
 
 @app.route("/abate", methods=["POST"])
 def abate():
